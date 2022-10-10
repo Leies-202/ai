@@ -32,7 +32,7 @@ export default class extends Module {
 		this.tl.on('note', this.onNote);
 	
 		setInterval(() => {
-			if (this.pendCount + (Math.random() * 30) > 30) {
+			if (this.pendCount + (Math.random() * 120) > 120) {
 				this.pendCount = 0;
 				this.post();
 			}
