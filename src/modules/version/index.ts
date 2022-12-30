@@ -35,8 +35,6 @@ export default class extends Module {
 	public versionCheck = () => {
 		// バージョンチェック
 		this.getVersion().then(fetched => {
-			this.log(`Version fetched: ${JSON.stringify(fetched)}`);
-
 			if (this.latest != null && fetched != null) {
 				const serverChanged = this.latest.server !== fetched.server;
 
