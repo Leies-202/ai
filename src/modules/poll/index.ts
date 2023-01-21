@@ -5,6 +5,7 @@ import { genItem } from '@/vocabulary';
 import config from '@/config';
 import { Note } from '@/misskey/note';
 import * as loki from 'lokijs';
+import { kewyegenabo } from '@/kewyegenabo';
 
 export default class extends Module {
 	public readonly name = 'poll';
@@ -85,7 +86,8 @@ export default class extends Module {
 			const offset = Math.floor(rng() * count);
 
 			const x = this.learnedKeywords.chain().find().offset(offset).limit(1).data();
-			const keyword = x[0]?.keyword || null;
+			let keyword = x[0]?.keyword || null;
+			if (Math.random() * 100 > 80) keyword = kewyegenabo(keyword);
 			return keyword;
 		};
 

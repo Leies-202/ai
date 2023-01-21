@@ -6,6 +6,7 @@ import config from '@/config';
 import * as loki from 'lokijs';
 import Stream from '@/stream';
 import { Note } from '@/misskey/note';
+import { kewyegenabo } from '@/kewyegenabo';
 
 export default class extends Module {
 	public readonly name = 'noting';
@@ -59,7 +60,8 @@ export default class extends Module {
 				const offset = Math.floor(rng() * count);
 
 				const x = this.learnedKeywords.chain().find().offset(offset).limit(1).data();
-				const keyword = x[0]?.keyword || null;
+				let keyword = x[0]?.keyword || null;
+				if (Math.random() * 100 > 80) keyword = kewyegenabo(keyword);
 				return keyword;
 			};
 
