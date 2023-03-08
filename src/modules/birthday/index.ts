@@ -50,7 +50,7 @@ export default class extends Module {
 
 			this.ai.sendMessage(friend.userId, {
 				text: text
-			});
+			}).catch(() => {});
 		});
 	}
 }

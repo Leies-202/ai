@@ -141,7 +141,7 @@ export default class extends Module {
 		if (remind.isDm) {
 			this.ai.sendMessage(friend.userId, {
 				text: serifs.reminder.notifyWithThing(remind.thing, friend.name)
-			});
+			}).catch(() => {});
 		} else {
 			reply = await this.ai.post({
 				renoteId: remind.thing == null && remind.quoteId ? remind.quoteId : remind.id,
