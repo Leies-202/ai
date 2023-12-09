@@ -68,6 +68,7 @@ export default class extends Module {
 		}
 
 		if (includes(note.text, ['ぴざ'])) return react('🍕');
+		if (includes(note.text, ['プリント'])) return react('🖨');
 		if (includes(note.text, ['ぷりん'])) return react('🍮');
 		if (includes(note.text, ['うんち'])) return react('🚽');
 		if (includes(note.text, ['衣亜', '衣亜ちゃん', '衣亜たそ'])) return react('🙌');
