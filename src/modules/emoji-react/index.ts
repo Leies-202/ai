@@ -1,5 +1,5 @@
 import autobind from 'autobind-decorator';
-import { parse } from 'twemoji-parser';
+import { parse } from '@twemoji/parser';
 const delay = require('timeout-as-promise');
 
 import { Note } from '@/misskey/note';

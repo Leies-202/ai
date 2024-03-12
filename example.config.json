@@ -1,0 +1,11 @@
+{
+	"host": "https://example.com",
+	"i": "",
+	"master": null,
+	"notingEnabled": true,
+	"keywordEnabled": false,
+	"keywordInterval": 60,
+	"chartEnabled": true,
+	"reversiEnabled": false,
+	"serverMonitoring": false
+}
