@@ -82,7 +82,9 @@ export default class extends Module {
 			this.ai.post({
 				replyId: data.msgId,
 				text: text
-			});
+			}).catch(e => {
+				console.error(`timer callback failed`, e);
+			})
 		}
 	}
 }
