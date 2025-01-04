@@ -395,13 +395,15 @@ export default {
 	},
 
 	maze: {
-		post: "今日の迷路だよ！ #AiMaze",
-		foryou: "描いたよ！",
+		post: '今日の迷路だよ！ #AiMaze',
+		foryou: '描いたよ！',
+		nocanvas: '失敗しちゃった…。このサーバーにはcanvasが無いから描けないみたい。'
 	},
 
 	chart: {
-		post: "インスタンスの投稿数だよ！",
-		foryou: "描いたよ！",
+		post: 'インスタンスの投稿数だよ！',
+		foryou: '描いたよ！',
+		nocanvas: '失敗しちゃった…。このサーバーにはcanvasが無いから描けないみたい。'
 	},
 
 	sleepReport: {
